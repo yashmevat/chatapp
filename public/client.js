@@ -9,7 +9,9 @@ do {
 textarea.addEventListener('keyup',(e)=>{
 if(e.key=="Enter")
 {
-      sendmessage(e.target.value);
+      let text = e.target.value;
+      if(text.trim()!="")
+        sendmessage(text.trim());
 }
 })
 
